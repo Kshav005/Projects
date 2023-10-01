@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            background-color: #EFE1D1
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .main {
+            background-color: #331D2C;
+            height: 30vw;
+            position: relative;
+        }
+        @keyframes fadein {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        #title1 {
+            font-size: 7vw;
+            font-family: 'Signika', sans-serif;
+            color: #EFE1D1;
+            margin-left: 1vw;
+            position: absolute;
+            margin-top: 4vw;
+            animation-name: fadein;
+            animation-delay: 0.5s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+        @keyframes cursora {
+            50% {border-color: transparent;}
+        }
+        @keyframes typing {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 37vw;
+            }
+        }
+        #title2 {
+            font-size: 7vw;
+            width: 0;
+            font-family: 'Signika', sans-serif;
+            color: #EFE1D1;
+            margin-left: 1vw;
+            position: absolute;
+            margin-top: 12vw;
+            margin-left: 1vw;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid;
+            animation: 1.5s steps(10) 2s forwards typing, 0.75s step-end infinite forwards cursora;
+        }
+        #name {
+            color: #A78295;
+            cursor: default;
+        }
+
+        @keyframes peek {
+            from {right: -40vw}
+            to {right: -11vw;}
+        }
+        #laptop {
+            width: 30vw;
+            position: absolute;
+            right: -40vw;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-name: peek;
+            animation-duration: 1.5s;
+        }
+        #quotetxt {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7vw;
+            position: absolute;
+            bottom: 1vw;
+            margin: 1.5vw;
+            opacity: 0;
+            width: 40vw;
+            color: #f4eee8;
+            animation: 2s linear 4s forwards fadein
+        }
+        .area1 {
+            margin: 1vw;
+            margin-top: 5vw;
+            font-size: 2vw;
+            text-align: justify;
+            line-height: 3.5vw;
+            animation-name: fadein;
+            animation-delay: 3s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+        .content {
+            font-family: 'Asap Condensed', sans-serif;
+            color: #331D2C;
+        }
+        #capit {
+            font-family: 'PT Serif', serif;
+            font-size: 2.5vw;
+        }
+        .projects1 {
+            margin-top: 4vw;
+            display: flex;
+            animation-name: fadein;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+        .projects2 {
+            margin-top: 1vw;
+            display: flex;
+            animation-name: fadein;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+
+        .projectbox {
+            margin: 0vw 3vw 3vw 3vw;
+            height: 28vw;
+            width: 22vw;
+            border: 0.3vw solid #331D2C;
+            border-radius: 0.75vw;
+        }
+        .projectbox:hover {
+            color: #f4eee8;
+            background-color: #331D2C;
+            cursor: pointer;
+        }
+
+        #projecthead {
+            margin: 0.4vw;
+            font-family: 'Signika', sans-serif;
+            font-size: 1.6vw;
+        }
+        #para {
+            margin: 0.45vw;
+            font-family: 'Asap Condensed', sans-serif;
+            font-size: 1.5vw;
+            text-align: justify;
+        }
+        #titlehead {
+            font-size: 5vw;
+            font-family: 'PT Serif', serif;
+            margin-top: 3vw;
+            width: 100%;
+            color: #331D2C;
+            background-color: #A78295;
+            text-align: center;
+            animation-name: fadein;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+        #goaltxt {
+            font-size: 2vw;
+            font-family: 'Asap Condensed', sans-serif;
+            margin: 1vw;
+            margin-top: 3vw;
+            line-height: 3.5vw;
+            text-align: justify;
+            color: #331D2C;
+            animation-name: fadein;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-duration: 1s;
+            opacity: 0;
+        }
+        .end1, .end2 {
+            background-color: white;
+        }
+        .end1 {
+            color: #331D2C;
+            height: 3vw;
+            margin-top: 5vw;
+            font-size: 2.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 0.5vw solid black;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        .end2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vw;
+        }
+        .icons {
+            width: 4vw;
+            margin-right: 2vw;
+        }
+        #icon1:hover {
+            content: url("git.gif");
+            color: #EFE1D1;
+            cursor: pointer;
+        }
+        #icon2:hover {
+            content: url("insta.gif");
+            color: #EFE1D1;
+            cursor: pointer;
+        }
+        #icon3:hover {
+            content: url("abc.gif");
+            color: #EFE1D1;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width: 414px) {
+            .main {
+                height: 45vw;
+            }
+            #title1 {
+                font-size: 10vw;
+            }
+            @keyframes typemob {
+                from {width: 0vw;}
+                to {width: 53vw;}
+            }
+            #title2 {
+                font-size: 10vw;
+                top: 5vw;
+                animation: 1.5s steps(10) 2s forwards typemob, 0.75s step-end infinite forwards cursora;
+            }
+            #laptop {
+                visibility: hidden;
+            }
+            #quotetxt {
+                font-size: 2.5vw;
+                width: 47vw;
+            }
+            #capit {
+                font-size: 6vw;
+            }
+            .content {
+                font-size: 4vw;
+                line-height: 7vw;
+                margin: 8vw 1vw 7vw 1vw
+            }
+            #titlehead {
+                font-size: 8vw;
+                margin: 10vw 0vw 7vw 0vw
+           }
+            .projectbox {
+                height: 40vw;
+                margin-top: 2vw;
+
+           }
+           #para {
+                font-size: 1.9vw;
+                margin: 2vw 1vw 0vw 1vw;
+                
+           }
+           #projecthead {
+                font-size: 2vw;
+                margin: 2vw 1vw 1vw 1vw;
+           }
+            #goaltxt {
+                font-size: 4vw;
+                line-height: 7vw;
+                margin: 8vw 1vw 7vw 1vw
+           }
+            .end1 {
+                height: 10vw;
+                font-size: 6vw;
+           }
+           .end2 {
+                height: 8vw;
+           }
+           .icons {
+                width: 8vw;
+           }
+           #icon1:hover {
+                content: none;
+           }
+           #icon2:hover {
+                content: none;
+           }
+           #icon3:hover {
+                content: none;
+           }
+        }
+        @media screen and (min-width: 415px) and (max-width: 601px) {
+            .main {
+                height: 40vw;
+            }
+            #title1 {
+                font-size: 12vw;
+            }
+
+            @keyframes typetab {
+                from {width: 0vw;}
+                to {width: 58vw;}
+            }
+            #title2 {
+                font-size: 11vw;
+                margin-top: 16vw;
+                animation: 1.5s steps(15) 2s forwards typetab, 0.75s step-end infinite forwards cursora;
+            }
+            #quotetxt {
+                font-size: 2.5vw;
+                width: 47vw;
+            }
+            #capit {
+                font-size: 6.6vw;
+            }
+            .content {
+                font-size: 4.5vw;
+                line-height: 9vw;
+                margin: 13vw 1vw 10vw 1vw;
+            }
+            #titlehead {
+                font-size: 8vw;
+                margin: 10vw 0vw 7vw 0vw
+            }
+            #para {
+                font-size: 1.9vw;
+                margin: 2vw 1vw 0vw 1vw;
+            }
+            #projecthead {
+                font-size: 2vw;
+                margin: 2vw 1vw 1vw 1vw;
+            }
+            .projectbox {
+                height: 40vw;
+            }
+            #goaltxt {
+                font-size: 4.5vw;
+                line-height: 9vw;
+                margin: 7vw 1vw 10vw 1vw;
+            }
+            .end1 {
+                height: 10vw;
+                font-size: 6vw;
+           }
+           .end2 {
+                height: 10vw;
+           }
+           .icons {
+                width: 9vw;
+           }
+           #icon1:hover {
+                content: none;
+           }
+           #icon2:hover {
+                content: none;
+           }
+           #icon3:hover {
+                content: none;
+           }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p id="title1">Hello,</p>
+        <p id="title2">I am <a id="name">Keshav</a>.</p>
+        <img src="lappy.png" alt="laptopimg" id="laptop">
+        <p id="quotetxt">"You don't understand anything until you learn it in more than one way."</p>
+    </div>
+    <div class="area1">
+        <p class="content"><a id="capit">I</a> am an intermediate programmer, currently a student of 18 year old. Pretty much knowing about Python, SQL, HTML and CSS. I learnt HTML in 2017 and it was part of our school curicullum. So, officially my first computer language that I learnt is Python, started in 2021. I have completed all the basics of Python like inheritance, classes, modifiers, constructors, decorators and few modules like Tkinter, Requests, OS, PyGame, Pandas, Pillow and many more. You can check out some of my projects below!</p>
+    </div>
+    <h2 id="titlehead">Projects</h2>
+    <div class="projects1">
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Astrology Webpage Template</h3>
+            <p id="para">A basic, yet complicated project. A random template of a cool astrology webpage which has a rotating globe and few features which can inspire to create websites like this. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Bill Invoice</h3>
+            <p id="para">Python project which uses a built-in GUI module known as Tkinter and JSON. This program creates a file and stores the customer ordered items data in a txt file. It retrieves the price of each item from JSON and also creates folder all by itself for different dates. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Dictionary</h3>
+            <p id="para">Another interesting Python project which uses the 'requests' module to retrieve data using an API and then convert it into JSON readable form to print the meanings using loop, as the output. Win32 module is additionally used to pronounce the words. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">QR Code Generator</h3>
+            <p id="para">Uses 'requests', 'tkinter', 'pillow' modules. API is used to send the link and convert it to QR code, then 'pillow' module turns the provided QR code to a readable image format and automatically opens the Photos, which allows you to save the QR code. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+    </div>
+    <div class="projects2">
+    <div class="projectbox"><a href="" target="_blank">
+        <h3 id="projecthead">Weather App</h3><p id="para">Project made with Tkinter along with API. This program tells you about the weather conditions of any place, with the precipation chances and cloud percentage. Though, the data received is only 70% accurate. Click here to visit the github page of this project.</p>
+        </a>
+    </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Contact List Storage</h3><p id="para">A basic program which uses the power of OOPS, to store information of contacts along with their names and phone numbers, allowing the user to delete or show the list. A good way to practice OOPS. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Bot</h3><p id="para">No source code, but a great example you can get by using it. Made with Python and its 10 different modules. Click here to invite.</p>
+            </a>
+        </div>
+        <div class="projectbox"><a href="" target="_blank">
+            <h3 id="projecthead">Password Generator</h3><p id="para">Another beginner's program to practice. Use tkinter to build to good GUI, with a menu bar that allows the user to choose the preferred length and thus generate the password using random symbols. Click here to visit the github page of this project.</p>
+            </a>
+        </div>
+    </div>
+        <div class="goals">
+            <h2 id="titlehead">Goals</h2>
+            <p id="goaltxt">Currently I have too many short-term goals which I want to accompolish. I started JavaScript in order to enhance my web development skills, scikit-learn to know more about machine learning and it's algorithms, SQL along with Python to create a server which will store and retrieve huge amount of data. Then, the only thing which will remain is the applications of what all I have learnt. Many projects will be made in the future and I will upload them on github. This webpage and the old portfolio webpage will be uploaded with their source code, so that those who want to create one, can learn and know about all the features they can add in their webpage portfolio.</p>
+        </div>
+        <div class="end1">
+            <p id="endtxt">Have any questions? Contact Me :</p>
+        </div>
+        <div class="end2">
+            <a href="" target="_blank" class="icons" id="icon1"><img src="git.png" alt="gitimg" class="icons" id="icon1"></a>
+            <a href="" target="_blank" class="icons" id="icon2"><img src="insta.png" alt="instaimg" class="icons" id="icon2"></a>
+            <a href="" target="_blank" class="icons" id="icon3"><img src="abc.png" alt="abcimg" class="icons" id="icon3"></a>
+        </div>
+    
+    
+</body>
+</html>

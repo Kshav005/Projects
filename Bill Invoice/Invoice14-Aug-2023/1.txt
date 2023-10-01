@@ -1,0 +1,11 @@
+Invoice No. - 1, Customer name - Aryan
+
+Items ~
+pipe (₹200x24=4800.0)
+watermelon (₹70x5=350.0)
+pipe (₹200x2=400.0)
+soda (₹20x4=80.0)
+keyboard (₹499x1=499.0)
+milk (₹27x7=189.0)
+
+Total Amount = ₹6318.0
