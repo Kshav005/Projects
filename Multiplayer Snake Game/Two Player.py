@@ -37,7 +37,7 @@ p2r = pygame.transform.scale(p2r, (500, 60))
 
 def loadscreen() : 
     exit_game = False 
-    pygame.mixer.music.load("game sound.mp3")
+    pygame.mixer.music.load("game sound2.mp3")
     pygame.mixer.music.play()
     p1 = False
     p2 = False
@@ -95,7 +95,7 @@ def gameloop() :
     snake2_length = 1
     winner = None
     
-    pygame.mixer.music.load("ingame music.mp3")
+    pygame.mixer.music.load("ingame music2.mp3")
     pygame.mixer.music.play()
     
     if(not os.path.exists("hhighscore.txt")) : 
