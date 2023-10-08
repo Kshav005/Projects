@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        * {
+            padding: 0vw;
+            margin: 0vw;
+        }
+
+        @keyframes fadein {
+            to {opacity: 1;}
+            
+        }
+
+        .imagewall {
+            width: 45vw;
+            height: 120vw;
+            float: left;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            animation-name: fadein;
+            animation-timing-function: linear;
+            animation-duration: 0.5s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        #wallpaper {
+            width: 45vw;
+            height: 50vw;
+            position: relative;
+            top: -1vw;
+        }
+
+
+        @keyframes movement1 {
+            25% {top: 15vw; left: 33vw;}
+            50% {top: 37vw; left: 27vw;}
+            100% {top: -3vw; left: -3vw;}
+        }
+        @keyframes movement2 {
+            25% {top: 24vw; left: 33vw;}
+            50% {top: 30vw; left: -2vw;}
+            100% {top: -2vw; left: 25vw;}
+        }
+        @keyframes movement3 {
+            25% {left: 33vw;}
+            50% {top: -2vw; left: 27vw;}
+            75% {top: 37vw;}
+            100% {top: 25; left: -2vw;}
+        }
+        @keyframes movement4 {
+            25% {left: 33vw;}
+            50% {top: 15vw; left: -2vw;}
+            75% {top: 30vw; left: 33vw;}
+            90% {top: 37vw; left: -2vw;}
+            100% {top: 5vw; left: -2vw;}
+        }
+
+        .bubbles {
+            width: 15vw;
+            position: absolute;
+        }
+
+        #bub1 {
+            top: -2vw;
+            left: -2vw;
+            animation-name: movement1;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-duration: 25s;
+        }
+        #bub2 {
+            top: -2vw;
+            left: 25vw;
+            animation-name: movement2;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 20s;
+        }
+        #bub3 {
+            top: 25vw;
+            left: -2vw;
+            animation-name: movement3;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 25s;
+        }
+        #bub4 {
+            top: 5vw;
+            left: -2vw;
+            animation-name: movement4;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 35s;
+        }
+
+
+        #heading {
+            position: absolute;
+            z-index: 2;
+            top: 17vw;
+            text-align: center;
+            font-size: 6vw;
+            font-family: 'Gabarito', cursive;
+            letter-spacing: 0.5vw;  
+            color: #DAFFFB;
+            cursor: default;
+            
+        }
+
+        #line {
+            position: absolute;
+            top: 14vw;
+            height: 0.5vw;
+            background-color: #04364A;
+            border: 0.2vw solid #04364A;
+            width: 30vw;
+        }
+
+        @keyframes card {
+            to {
+                right: 0vw;
+            }
+            
+        }
+
+        .loginpage {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            float: right;
+            right: -50vw;
+            height: 50vw;
+            width: 55vw;
+            animation-name: card;
+            animation-timing-function: cubic-bezier(0.250, 0.250, 0.815, 1.190);
+            z-index: 4;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            background-color: #DAFFFB;
+        }
+        #logintxt {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 4vw;
+            margin-top: 7vw;
+            letter-spacing: 1vw;
+            color: #04364A;
+            cursor: default;
+        }
+        .inputs {
+            width: 35vw;
+            height: 3vw;
+            padding-left: 2vw;
+            position: absolute;
+            font-size: 1.7vw;
+            font-family: 'Roboto Slab', serif;
+            border-radius: 0.5vw;
+        }
+        .inputs:focus {
+            border-left: 1vw solid #04364A;
+        }
+        #input1 {
+            margin-top: 20vw;
+        }
+        #input2 {
+            margin-top: 25vw;
+        }
+        .signcheck {
+            position: absolute;
+            width: 2vw;
+            height: 2vw;
+            top: 32vw;
+            right: 44.1vw;
+        }
+        #signtxt {
+            position: absolute;
+            font-size: 1.8vw;
+            top: 31.9vw;
+            right: 30vw;
+            color: #04364A;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: default;
+        }
+        a {
+            text-decoration: none;
+        }
+        #new:hover {
+            text-decoration: purple underline;
+        }
+        #new {
+            position: absolute;
+            font-size: 1.5vw;
+            top: 32vw;
+            right: 9vw;
+            font-family: 'Lato', sans-serif;
+        }
+        #button {
+            font-size: 2vw;
+            color: white;
+            position: absolute;
+            top: 39vw;
+            background-color: #04364A;
+            width: 40vw;
+            text-align: center;
+            border-radius: 1vw;
+            cursor: pointer;
+            font-family: 'Mukta', sans-serif;
+        }
+        #button:hover {
+            background-color: #08658a;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="imagewall">
+        <img src="wall.png" alt="wallpaper" id="wallpaper">
+        <img src="bubble.png" alt="bubble" class="bubbles" id="bub1">
+        <img src="bubble.png" alt="bubble" class="bubbles" id="bub2">
+        <img src="bubble.png" alt="bubble" class="bubbles" id="bub3">
+        <img src="bubble.png" alt="bubble" class="bubbles" id="bub4">
+        <h2 id="heading">Welcome Back!</h2>
+    </div>
+    <div class="loginpage">
+        <h2 id="logintxt">LOGIN</h2>
+        <hr id="line">
+        <input type="text" class="inputs" placeholder="Email" id="input1">
+        <input type="password" class="inputs" placeholder="Password" id="input2">
+        <input type="checkbox" name="signed" class="signcheck">
+        <p id="signtxt">Keep me signed in</p>
+        <p id="new"><a href=""> New user?</a></p>
+        <p id="button"><a href=""></a>LOGIN</p>
+    </div>
+</body>
+</html>
