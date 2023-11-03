@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&display=swap" rel="stylesheet">
+    <title>fLOAt</title>
+    <style>
+        * {
+            margin: 0vw;
+            padding: 0vw;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #141E46;
+            height: 4vw;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.7vw;
+        }
+        .main {
+            height: 30vw;
+            background-image: linear-gradient(#d5c8bc , #ffde97);
+            position: relative;
+        }
+        .navtxt {
+            margin-left: 1vw;
+            width: 13vw;
+            text-align: center;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+        }
+        .navtxt:hover {
+            background-color: white;
+            color: #141E46;
+            transition: 0.15s linear;
+            border-radius: 0.3vw;
+        }
+        #productimg {
+            width: 37vw;
+            position: absolute;
+            left: 5vw;
+        }
+        #maintxt {
+            font-size: 5vw;
+            float: right;
+            margin-top: 8vw;
+            margin-right: 3vw;
+            width: 50vw;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #141E46;
+        }
+        #logotxt {
+            width: 8vw;
+            position: absolute;
+            right: 2vw;
+            font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 2.6vw;
+            cursor: pointer;
+            background-color: red;
+            width: 8vw;
+            text-align: center;
+            transition: 0.2s ease-out;
+        }
+        #logotxt:hover {
+            background-color: white;
+            color: red;
+            transition: 0.2s ease-in;
+        }
+        #line {
+            border: 0.2vw solid black;
+            width: 45vw;
+            position: absolute;
+            bottom: 8vw;
+            right: 10vw;
+        }
+        #mainslog {
+            font-size: 2vw;
+            position: absolute;
+            bottom: 4vw;
+            right: 14vw;
+            font-family: 'Franklin Gothic Medium', 'Arial';
+            letter-spacing: 0.7vw;
+            color: #2d3f87;
+        }
+        .main2 {
+            height: 30vw;
+            margin-top: 5vw;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .heading1 {
+            font-size: 5vw;
+            font-family: 'Playpen Sans', cursive;
+            height: min-content;
+            color:black;
+            margin-top: 20vw;
+            margin-left: 2vw;
+            text-align: center;
+        }
+        .productimg {
+            width: 22vw;
+            height: 23vw;
+            border-radius: 1vw;
+            transition: 0.2s linear;
+        }
+        .productimg:hover {
+            transform:scale(1.1);
+            cursor: pointer;
+            filter: drop-shadow(0.3vw 0.3vw #0600ac);
+            transition: 0.2s linear;
+        }
+        .main3 {
+            height: 30vw;
+            background-color: #2d3f87;
+        }
+        .logo {
+            font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 5vw;
+            background-color: white;
+            margin-top: 3vw;
+            color: red;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="navtxt">HOME</p>
+        <p class="navtxt">ABOUT</p>
+        <p class="navtxt">STORES</p>
+        <p class="navtxt">CONTACT US</p>
+        <p id="logotxt">fLOAt</p>
+    </div>
+    <div class="main">
+        <img src="images/head.png" alt="headphone" id="productimg">
+        <p id="maintxt">Sound that Inspires, Quality that Endures.</p>
+        <hr id="line">
+        <p id="mainslog">100% Genuine Products</p>
+    </div>
+    <p class="heading1">Best Sellers</p>
+    <div class="main2">
+        <img src="images/pod.png" alt="" id="img1" class="productimg">
+        <img src="images/headphone.png" alt="" id="img2" class="productimg">
+        <img src="images/speak.png" alt="" id="img3" class="productimg">
+    </div>
+    <div class="main3">
+        <p class="logo">fLOAt</p>
+    </div>
+    <div class="contain"></div>
+</body>
+</html>

@@ -24,6 +24,7 @@ def confi() :
         image.save(f"Results\\{ctime}.png", "PNG")
         tkmb.showinfo("Sucessfully changed the format!", f"The image has been saved in the 'Results' folder with the name '{ctime}'. Thanks for using our application 😄")
     elif info == "JPEG (.jpg)" : 
+        image= image.convert('RGB')
         image.save(f"Results\\{ctime}.jpg", "JPEG")
         tkmb.showinfo("Sucessfully changed the format!", f"The image has been saved in the 'Results' folder with the name '{ctime}'. Thanks for using our application 😄")
     elif info == "ICO (.ico)" : 

@@ -41,9 +41,6 @@
             from {opacity: 0;}
             to {opacity: 1;}
         }
-        @keyframes bordercol {
-            to {border-color: #fffacf;}
-        }
 
         .imgs {
             opacity: 0;
@@ -55,9 +52,6 @@
         }
         .imgs:hover {
             filter: brightness(1.2);
-            animation-name: bordercol;
-            animation-timing-function: linear;
-            animation-duration: 0.5s;
         }
         #img1 {
             left: 0vw;
@@ -195,6 +189,36 @@
             font-size: 4vw;
             font-weight: 700;
         }
+
+        .themes {
+            margin-top: 5vw;
+            color: white;
+            background-color: black;
+            text-align: center;
+            font-size: 3vw;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1vw;
+            height: 35vw;
+        }
+
+        .themeimg {
+            width: 20vw;
+            border: 0.5vw solid white;
+            transition: 0.2s linear;
+        }
+        .themeimg:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+        .imagestheme {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #theme1 {
+            border-color: #fffacf;
+        }
+
         .end1 {
             height: 3vw;
             color: #101820;
@@ -203,7 +227,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-top: 0.5vw solid #F9E795;
+            border-top: 0.7vw solid #F9E795;
             font-family: 'Bebas Neue', sans-serif;
             background-color: white;
         }
@@ -572,6 +596,15 @@
     <di target="_blank"v class="main3">
         <p id="endtxt">My name is Keshav, currently living in India. I am a fresher studying Computer Science. In terms of experience, I know Python, SQL, JavaScript, HTML and CSS. Most of my interest goes into Web designing, GUI app developing and Data related stuff. I use JSON, currently in order to store and retrieve data. I use Git to commit all of my projects. After being well versed with data storing techniques, I will be focusing on new and easier way of storing and retrieving of data. Months after, I will be creating more complex projects and gain experience. The projects above are quite beginner level but I am growing, learning and trying to create more amazing projects which can help me learn even more about various concepts. Also, the description of every project is on the github. Just click on the image of the project and it will redirect you to that Github page. After that, just open the Readme file to get the information of how the project works. The webpage will get updated on a monthly basis or maybe every 2 months. I am also working on learning more modules along with my studies. Below are my social handles!</p>
     </div>
+    <div class="themes">
+        <h2 id="themehead">THEMES</h2>
+        <div class="imagestheme">
+            <img src="theme1.png" id="theme1" alt="imgtheme" class="themeimg">
+            <img src="theme2.png" id="theme2" alt="imgtheme" class="themeimg">
+            <img src="theme3.png" id="theme3" alt="imgtheme" class="themeimg">
+            <img src="theme4.png" id="theme4" alt="imgtheme" class="themeimg">
+        </div>
+    </div>
     <div class="end1">
         <p>Want to talk? Contact Me here :</p>
     </div>
@@ -580,5 +613,96 @@
         <a href="" target="_blank"><img src="insta.png" alt="instaimg" class="icons" id="icon2"></a>
         <a href="" target="_blank"><img src="abc.png" alt="abcimg" class="icons" id="icon3"></a>
     </div>
+
+    <script>
+        let theme1col = document.getElementById("theme1")
+        let theme2col = document.getElementById("theme2")
+        let theme3col = document.getElementById("theme3")
+        let theme4col = document.getElementById("theme4")
+
+        let heading1col = document.getElementById("heading1")
+        let imgwallbordercol = document.getElementsByClassName("imgs")
+        let txtcol = document.getElementById("txt")
+        let main2col = document.getElementsByClassName("main2")
+        let projecttxtcol = document.getElementsByClassName("projecttext")
+        let end1bordercol = document.getElementsByClassName("end1")[0]
+
+        let activethemebordercol = document.getElementsByClassName("themeimg")
+
+        theme1col.addEventListener("click", () => {
+            for (let t=0; t<activethemebordercol.length;t++) {
+                activethemebordercol[t].style.borderColor = "white"
+            }
+            activethemebordercol[0].style.borderColor = "#fffac"
+            document.body.style.backgroundColor = "#101820"
+            heading1col.style.color = "#FEE715"
+            for (let z=0;z<imgwallbordercol.length; z++) {
+                imgwallbordercol[z].style.borderColor = "#F9E795"
+            }
+            main2col[0].style.backgroundColor = "#F9E795"
+            for (let z1=0; z1<projecttxtcol.length; z1++) {
+                projecttxtcol[z1].style.color = "#fffacf"
+            }
+            end1bordercol.style.borderColor = "#F9E795"
+        })
+
+        theme2col.addEventListener("click", () => {
+            for (let t1=0; t1<activethemebordercol.length;t1++) {
+                activethemebordercol[t1].style.borderColor = "white"
+            }
+            activethemebordercol[1].style.borderColor = "#E95793"
+            document.body.style.backgroundColor = "#610C9F"
+            heading1col.style.color = "#E95793"
+            for (let z=0;z<imgwallbordercol.length; z++) {
+                imgwallbordercol[z].style.borderColor = "#E95793"
+            }
+            main2col[0].style.backgroundColor = "#DA0C81"
+            for (let z1=0; z1<projecttxtcol.length; z1++) {
+                projecttxtcol[z1].style.color = "#E95793"
+            }
+            end1bordercol.style.borderColor = "#E95793"
+        })
+        
+        theme3col.addEventListener("click", () => {
+            for (let t2=0; t2<activethemebordercol.length;t2++) {
+                activethemebordercol[t2].style.borderColor = "white"
+            }
+            activethemebordercol[2].style.borderColor = "#DAFFFB"
+            document.body.style.backgroundColor = "#04364A"
+            heading1col.style.color = "#DAFFFB"
+            for (let z=0;z<imgwallbordercol.length; z++) {
+                imgwallbordercol[z].style.borderColor = "#DAFFFB"
+            }
+            main2col[0].style.backgroundColor = "#64CCC5"
+            for (let z1=0; z1<projecttxtcol.length; z1++) {
+                projecttxtcol[z1].style.color = "#DAFFFB"
+            }
+            end1bordercol.style.borderColor = "#64CCC5"
+        })
+
+        theme4col.addEventListener("click", () => {
+            for (let t3=0; t3<activethemebordercol.length;t3++) {
+                activethemebordercol[t3].style.borderColor = "white"
+            }
+            activethemebordercol[3].style.borderColor = "#F8F0E5"
+            document.body.style.backgroundColor = "#102C57"
+            heading1col.style.color = "#F8F0E5"
+            for (let z=0;z<imgwallbordercol.length; z++) {
+                imgwallbordercol[z].style.borderColor = "#F8F0E5"
+            }
+            main2col[0].style.backgroundColor = "#DAC0A3"
+            for (let z1=0; z1<projecttxtcol.length; z1++) {
+                projecttxtcol[z1].style.color = "#F8F0E5"
+            }
+            end1bordercol.style.borderColor = "#DAC0A3"
+        })
+
+    
+                    
+                    
+
+
+
+    </script>
 </body>
 </html>
