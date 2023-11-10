@@ -10,7 +10,6 @@ root = Tk()
 root.geometry("920x600")
 root.resizable(False, False)
 root.title("Bill Invoice")
-root.iconbitmap("C:\\Users\\PC\\Downloads\\bill-512.ico")
 
 def invoplus():
     calculate_fun()
